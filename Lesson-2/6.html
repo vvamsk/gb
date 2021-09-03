@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Урок 2.6 Домашнее задание.</title>
+	</head>
+	<body>
+		
+		<script>
+			
+			'use strict';
+			
+			let sum = 0, rub = "рублей", penult = 0, last;
+	
+			sum = prompt("Какую сумму вы хотите положить на счет (в рублях)");
+			
+			// Последнее число 
+			last = sum.toString().slice(-1);
+			
+			// Предпоследнее число
+			if (sum > 10) {
+				penult = sum.toString().slice(-2)[0];
+			}
+			
+			if (last == 1) { rub = "рубль"; }
+			else if (last == 2 && penult != 1) { rub = "рубля"; }
+			else if (last == 3 && penult != 1) { rub = "рубля"; }
+			else if (last == 4 && penult != 1) { rub = "рубля"; }
+			
+			alert("Ваша сумма в " + sum + " " + rub + " успешно зачислена");
+			
+		</script>
+		
+	</body>
+</html>
